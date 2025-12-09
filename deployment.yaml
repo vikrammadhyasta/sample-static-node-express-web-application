@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitorapp
+  labels:
+    app: monitorapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitorapp
+  template:
+    metadata:
+      labels:
+        app: monitorapp
+    spec:
+      containers:
+      - name: monitorapp
+        image: likhith189/simple_nodejs
+        ports:
+        - containerPort: 3000
