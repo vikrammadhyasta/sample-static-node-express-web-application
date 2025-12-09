@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample_static-node-express-web-application
+  name: web-application
   labels:
     app: node-web
 spec:
@@ -15,8 +15,8 @@ spec:
         app: node-web
     spec:
       containers:
-        - name: node-hello-container
-          image: vikrammadhyasta/node:latest
+        - name: node11
+          image: vikrammadhyasta/node:v1
           ports:
             - containerPort: 3000
           env:
