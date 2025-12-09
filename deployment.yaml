@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-hello-deployment
+  name: sample_static-node-express-web-application
   labels:
-    app: node-hello
+    app: node-web
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-hello
+      app: node-web
   template:
     metadata:
       labels:
-        app: node-hello
+        app: node-web
     spec:
       containers:
         - name: node-hello-container
